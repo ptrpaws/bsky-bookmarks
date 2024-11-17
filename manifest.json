@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "bsky bookmarks",
+  "version": "1.0",
+  "permissions": ["bookmarks", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://bsky.app/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
